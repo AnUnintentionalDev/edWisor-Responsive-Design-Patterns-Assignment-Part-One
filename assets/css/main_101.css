@@ -1,0 +1,141 @@
+/* COMMON-FUNCTIONALITIES */
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+h1{ font-size: 3.25em;}
+h2{ font-size: 2.85em;}
+h3 { font-size: 2.45em;}
+h4{ font-size: 2em;}
+h5{ font-size: 1.75em;}
+h6{ font-size: 1.5em;}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Raleway', sans-serif; font-weight: 700; color: rgb(0,100,186); position: relative; line-height: 1.5;}
+
+a { color: rgb(0,170,204); text-decoration: none; line-height: inherit; font-size: 0.9em;}
+a:hover { color: rgb(0,142,171); text-decoration: none;}
+a:focus { color: rgb(0,142,171); outline: none; }
+
+p {margin-top:0px;}
+
+/* END-OF-COMMON-FUNCTIONALITIES */
+
+/***
+LAYOUTS 
+***/
+
+#header{ width: 100%; min-height: 200px; background: #fff url('../images/header-banner.jpg')  no-repeat center center; background-size: cover; display: flex; display: -webkit-flex; flex-flow: column wrap; -webkit-flex-flow: column wrap; justify-content: center; align-content: center; text-align: center;}
+#header h1{ color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.5); padding: 0 2em; font-family: 'Tangerine', cursive;}
+
+.resp-web-des-vector{ width: 20em; margin: 0.5em auto; display: block; max-width: 100%;}
+
+.container{ max-width: 900px; margin: 0 auto;}
+#main{ width: 100%; position: relative;}
+
+/* MOSTLY-FLUID */
+
+.mostly-fluid-pattern{ width: 100%; display: flex; display: -webkit-flex; flex-flow: row wrap; -webkit-flex-flow: row wrap;}
+.mostly-fluid-pattern div{ box-sizing: border-box; min-height: 150px; min-width: 150px;}
+
+.mf-1{ color: #fff; background: #1a428a;}
+.mf-2{ color: #fff; background: #23cf53;}
+.mf-3{ color: #fff; background: #b30df9;}
+.mf-4{ color: #fff; background: #f99d0d;}
+.mf-5{ color: #fff; background: #f90d0d;}
+
+.mf-1,.mf-2,.mf-3,.mf-4,.mf-5{ width: 100%;}
+
+/* END-OF-MOSTLY-FLUID */
+
+/* COLUMN-DROP */
+
+.column-drop-pattern{ width: 100%; display: flex; display: -webkit-flex; flex-flow: row wrap; -webkit-flex-flow: row wrap;}
+.column-drop-pattern div{ box-sizing: border-box; min-height: 150px; min-width: 150px;}
+
+.cd-1{ color: #fff; background: #6b6b6b;}
+.cd-2{ color: #fff; background: #eaff5e;}
+.cd-3{ color: #fff; background: #556715;}
+
+.cd-1,.cd-2,.cd-3{ width: 100%;}
+
+/* END-OF-COLUMN-DROP */
+
+/* LAYOUT-SHIFTER */
+
+.layout-shifter-pattern{ width: 100%; display: flex; display: -webkit-flex; flex-flow: row wrap; -webkit-flex-flow: row wrap;}
+.layout-shifter-pattern div{ box-sizing: border-box; min-height: 150px; min-width: 150px;}
+
+.ls-1{ color: #fff; background: #171717;}
+.ls-2{ color: #fff; background: #eee;}
+.ls-3{ color: #fff; background: #bea382;}
+
+.ls-1,.ls-2,.ls-3,.ls-4{ width: 100%;}
+
+/* END-OF-LAYOUT-SHIFTER */
+
+/* OFF-CANVAS */
+
+.oc-1{ width: 100%; background: #647e94; position: absolute;}
+.oc-1 a{ color: #fff; padding: 1em; font-size: 150%;}
+
+.off-canvas-pattern{ position: relative; top: 0; left: 0; bottom: 0; z-index: 1000; width: 100%;}
+.off-canvas-pattern div{ box-sizing: border-box; min-height: 150px; min-width: 150px;}
+
+.oc-2#left-drawer{ position: fixed; width: 250px; top: 0; bottom: 0; left: 0; background: #000; padding: 1em; color: #fff; backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: translateX(-1000%); transition: all ease-in 0.3s; -webkit-transition: all ease-in 0.3s;}
+
+/***
+END-OF-LAYOUTS 
+***/
+
+
+/***
+REPONSIVE 
+***/
+
+
+@media screen and (min-width: 650px){
+    
+    .mf-1{ width: 100%;}
+    .mf-2, .mf-3,.mf-4, .mf-5{ width: 50%;}
+    
+    .cd-1{ width: 60%; order: 2; -webkit-order: 2;}
+    .cd-2{ width: 40%; order: 1; -webkit-order: 1;}
+    .cd-3{ width: 100%; order: 2; -webkit-order: 2;}
+    
+    .ls-1{ width: 25%;}
+    .ls-4{ width: 75%;}
+    .ls-2,.ls-3{ width: 100%;}
+    
+}
+
+@media screen and (max-width: 899px){
+    h1, h2, h3, h4, h5, h6{ margin: 0.25em 0; padding: 0 0.5em;}
+    p{  padding: 0 1.5em;}
+    #header h1{ padding: 0 0.5em; font-size: 2em;}
+    .resp-web-des-vector{ width: 14em; max-width: 100%;}
+}
+
+@media screen and (min-width: 800px){
+    .mf-1{ width: 60%;}
+    .mf-2{ width: 40%;} 
+    .mf-3,.mf-4, .mf-5{ width: 33.33%;}
+    
+    .cd-2,.cd-3{ width: 20%;}
+    
+    .ls-1{ width: 50%;}
+    .ls-4{ width: 50%;}
+    .ls-2,.ls-3{ width: 100%;}
+    
+    .oc-2{ }
+}
+
+/* END-OF-REPONSIVE */
+

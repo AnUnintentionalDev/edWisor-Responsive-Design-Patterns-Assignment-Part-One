@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Web Design Patterns by Rohit Sharma</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- CUSTOM-FONTS-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400,700|Tangerine:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/main_101.css">
+    
+</head>
+<body>
+    <!-- HEADER-->
+    <header id="header">
+        <h1><small><strong>edWisor</strong> Front End Level 2 Assignment 1</small><br>Responsive Web Design Patterns by Rohit Sharma</h1>
+    </header>
+    <!-- END-OF-HEADER-->
+    <!-- CONTAINER-->
+    <div class="container">
+        <!-- MAIN-->
+        <main id="main">
+            <!-- RESPONSIVE-WEB-DESIGN-SVG-->
+            <img src="assets/images/responsive-web-design.svg" alt="Responsive Web Design Vector" class="resp-web-des-vector">
+            
+            <p class="lead">All the examples below uses <strong><i>flexbox</i></strong> property to understand different responsive design patterns. We can use any kind of approach here but I have used this technique as it simple, easy and well supported now a days in almost all the browsers.</p>
+            <!-- END-OF-RESPONSIVE-WEB-DESIGN-SVG-->
+            <!-- MOSTLY-FLUID-->
+            <h2>Mostly Fluid</h2>
+            <p>The mostly fluid pattern consists primarily of a fluid grid. On large or medium screens, it usually remains the same size, simply adjusting the margins on wider screens.</p>
+            
+            <div class="mostly-fluid-pattern">
+                <div class="mf-1">
+                </div>
+                
+                <div class="mf-2">
+                </div>
+                
+                <div class="mf-3">
+                </div>
+                
+                <div class="mf-4">
+                </div>
+                
+                <div class="mf-5">
+                </div>
+            </div>
+            <!-- END-OF-MOSTLY-FLUID-->
+            
+            <!-- COLUMN-DROP-->
+            <h2>Column Drop</h2>
+            <p>For full-width multi-column layouts, column drop simply stacks the columns vertically as the window width becomes too narrow for the content</p>
+            
+            <div class="column-drop-pattern">
+                <div class="cd-1">
+                </div>
+                
+                <div class="cd-2">
+                </div>
+                
+                <div class="cd-3">
+                </div>
+            </div>
+            <!-- END-OF-COLUMN-DROP-->
+            
+            <!-- LAYOUT-SHIFTER-->
+            <h2> Layout Shifter</h2>
+            <p>The layout shifter pattern is the most responsive pattern, with multiple breakpoints across several screen widths</p>
+            
+            <div class="layout-shifter-pattern">
+                <div class="ls-1">
+                </div>
+                
+                <div class="ls-4">
+                    <div class="ls-2">
+                    </div>
+
+                    <div class="ls-3">
+                    </div>
+                </div>
+            </div>
+            <!-- END-OF-LAYOUT-SHIFTER-->
+            
+            <!-- OFF-CANVAS-->
+            <h2> Off Canvas</h2>
+            <p>Rather than stacking content vertically, the off canvas pattern places less frequently used content—perhaps navigation or app menus—off screen, only showing it when the screen size is large enough, and on smaller screens, content is only a click away.</p>
+            
+            <div class="oc-1" id="menu-icon">
+                <a href="javascript:void(0)" id="openCanvas"><i class="fa fa-bars"></i> Pull out Off Canvas</a>
+            </div>
+            
+            <div class="off-canvas-pattern" id="off-canvas-pattern">
+                <div class="oc-2" id="left-drawer">
+                    <a href="javascript:void(0)" id="closeCanvas"><i class="fa fa-close"></i> Close Off Canvas</a>
+                    
+                    <p style="font-size: 120%;">Hey I'm the off canvas content. Nice to meet you. Please click on close button above to hide me and if you want to see me again use <strong>Hamburger icon</strong> <i class="fa fa-bars"></i>. Thanks</p>
+                </div>
+            </div>
+            <!-- END-OF-OFF-CANVAS-->
+        </main>
+        <!-- END-OF-MAIN-->
+    </div>
+    <!-- END-OF-CONTAINER-->
+    
+    <script>
+            var openNav = document.getElementById('openCanvas');
+            var closeNav = document.getElementById('closeCanvas');
+            
+            var offCanvas_content = document.getElementById('left-drawer');
+        
+            function offCanvas(){                
+                offCanvas_content.style.transform = "translateX(0)";
+            }
+            
+            function closeOffCanvas(){
+                offCanvas_content.style.transform = "translateX(-100%)";
+            }
+            
+            openNav.addEventListener('click', offCanvas);
+            
+            closeNav.addEventListener('click', closeOffCanvas);
+        
+    </script>
+</body>
+</html>
